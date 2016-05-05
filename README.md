@@ -1,2 +1,2 @@
 # euler
-Project Euler attempts
+Project Euler scratchpad in Python
