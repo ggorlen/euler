@@ -19,31 +19,31 @@ string = "\
 63 66 04 68 89 53 67 30 73 16 69 87 40 31 \
 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23"
 
-a = []
+a = [int(x) for x in string.split()]
 
-[a.append(int(x)) for x in string.split()]
-
-"""
-0 -> 1 or 2
-1 -> 2 or 3
-2 -> 4 or 5
-3 -> 5 or 6
-4 -> 7 or 8
-5 -> 8 or 9
-6 -> 10 or 11
-7 -> 11 or 12
-8 -> 12 or 13
-13 -> 18 or 19
-19 -> 25 or 26
-26 -> 34 or 35
-hmm
-"""
+best = 0
+total = 0
 accumulator = 0
+count = 0
+route = {}
 
-for n in range(0, len(a)):
-  print(str(a[n]) + " goes to " + str(a[n + accumulator + 1]) + " and " + str(a[n + accumulator + 2]))
-  accumulator += 1
-  if 
-  # if n ..end/middle of line, decrement 1
+for n in range(0, len(a) - 16):
+
+  # decrement 1 at the beginning of each line
+  if count == accumulator:
+    accumulator += 1
+    count = 0
+  route[n] = n + accumulator
+  #route[n] = n + accumulator + 1
+
+  count += 1
 
 
+next_index = 0
+for i in range(0, 15):
+  total += a[next_index]
+  next_index = route.get(next_index)
+
+print(total)
+
+##### INCOMPLETE
