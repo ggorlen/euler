@@ -11,12 +11,12 @@ with open('p079_keylog.txt') as keylog:
     hist = {}
     
     for line in keylog:
-        for n in line:
+        for n in line.strip():
             
             # create histogram of indices
-            if n.isdigit() and n in hist:
+            if n in hist:
                 hist[n].append(line.index(n))
-            elif n.isdigit():
+            else:
                 hist[n] = [line.index(n)]
         
 # sort the histogram by average index position
