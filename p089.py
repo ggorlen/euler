@@ -36,7 +36,7 @@ DENOMINATIONS = {
 }
 
 def numeral_to_int(numeral):
-    # iterates through numeral and separates each number, adds up total and returns an integer
+    # converts numeral to integer
     
     value = []
     num = list(numeral.strip())
@@ -60,7 +60,7 @@ def numeral_to_int(numeral):
     
     
 def make_numeral(number):
-    # generates a roman numeral from a given number
+    # generates a roman numeral in minimal form from a given number
 
     result = ""
     n = str(number)[::-1]
@@ -126,7 +126,7 @@ def make_numeral(number):
             result = "CM" + result
 
     if len(n) > 3:
-        result += "M" * int(n[3:])
+        result = "M" * int(n[3:]) + result
             
     return result
     
