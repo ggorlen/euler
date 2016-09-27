@@ -1,5 +1,3 @@
-import sys
-
 def is_prime(n):
     if n == 2 or n ==3:
         return True
@@ -46,4 +44,4 @@ while True:
 
     if ratio[0] / ratio[1] < .1 and step > 2:
       print(length)
-      sys.exit(0)
+      break
