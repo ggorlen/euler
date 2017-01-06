@@ -46,12 +46,9 @@ for n in range(28123):
 # make a set of abundant numbers for fast lookup
 abundant_numbers_set = set(abundant_numbers)
 
-# run totals
+# run total
 total = 0
-for n in range(41):
-    if not is_sum_of_two_abundants(n):
-        total += n
-for n in range(41, 28123):
+for n in range(28123):
     if not is_sum_of_two_abundants(n):
         total += n
 print(total)
