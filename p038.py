@@ -14,16 +14,16 @@ What is the largest 1 to 9 pandigital 9-digit number that can be formed as the c
 
 import itertools
 
-pandigitals = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 # Readable version of the following list comprehension:
 """
+pandigitals = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 pandigitals = list(itertools.permutations(pandigitals))              # list() not necessary
 pandigitals = [''.join(str(i) for i in x) for x in pandigitals]
 pandigitals = [int(i) for i in pandigitals]
 """
 
-pandigitals = [int(i) for i in [''.join(str(i) for i in x) for x in itertools.permutations(pandigitals)]]
+pandigitals = [int(i) for i in [''.join(str(i) for i in x) for x in itertools.permutations([1, 2, 3, 4, 5, 6, 7, 8, 9])]]
 
 greatest_pandigitals = []
 for n in pandigitals:

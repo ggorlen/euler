@@ -16,7 +16,7 @@ while (True):
 		corner_number = 0
 		step += 2
 		side_length += 2
-	print(str(corner_value) + " " + str(side_length))
+	#print(str(corner_value) + " " + str(side_length))
 	if side_length == 1003:
 		break
 

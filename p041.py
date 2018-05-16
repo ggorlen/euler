@@ -23,7 +23,7 @@ def is_prime(n):
 
 l = [1,2,3,4,5,6,7]
 l = list(itertools.permutations(l))
-        
+
 for n in l:
     if is_prime(int(str(n[0]) + str(n[1]) + str(n[2]) + str(n[3]) + str(n[4]) + str(n[5]) + str(n[6]))):
         print(int(str(n[0]) + str(n[1]) + str(n[2]) + str(n[3]) + str(n[4]) + str(n[5]) + str(n[6])))
