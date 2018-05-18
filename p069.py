@@ -2,23 +2,27 @@
 https://projecteuler.net/problem=69
 '''
 
+import math
 
-### UNSOLVED ###
 
+def phi(n):
+    count = 0
 
-def phi_even(n):
-    count = 1
-    for i in range(1, n, 2):
-        if n % i != 0:
-            print('   ' + str(i))
+    for i in range(1, n):
+        if math.gcd(i, n) == 1:
             count += 1
+
     return count
     
     
-best = 0
+best_num = 0
+best_ratio = 0
 
-for x in range(6, 200, 6):
-    p = x / phi_even(x)
-    print('x: ' + str(x) + ' p: ' + str(p))
-    #    best = p
-#print(best)
+for n in range(2310, 1000000, 2310):
+    ratio = n / phi(n)
+
+    if ratio > best_ratio:
+        best_ratio = ratio
+        best_num = n
+
+print(best_num) # TODO 223s
