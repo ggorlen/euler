@@ -10,7 +10,7 @@ def sieve(n):
     nums = [False, False] + [True for x in range(1, n)]
     nums_len = len(nums)
 
-    sqrt_n = math.floor(n ** 0.5)
+    sqrt_n = math.ceil(n ** 0.5)
 
     for i in range(2, sqrt_n):
         if nums[i]:
